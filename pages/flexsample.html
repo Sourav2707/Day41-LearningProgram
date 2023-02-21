@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox sample</title>
+    <style>
+        body {
+            padding: 2em;
+        }
+        .headerContainer {
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            background-color: tomato;
+            font-weight: bold;
+            padding: 10px;
+        }
+        .footerContainer {
+            display: flex;
+            flex-flow: column wrap;
+            align-content: center;
+            background-color: lightgreen;
+            font-weight: bold;
+            padding: 10px;
+        }
+        .mainContainer {
+            display: flex;
+            flex-flow: row wrap;
+            font-weight: bold;
+            text-align: center;
+        }
+        .mainContentItems {
+            text-align: left;
+            background-color: deepskyblue;
+        }
+        article {
+            padding: 10px;
+            margin: 10px;
+            background: aqua;
+        }
+        .sideBarLeftItem {
+            background: gold;
+        }
+        .sideBarRightItem {
+            background: hotpink;
+        }
+        .sideBarItem{
+            flex: 1 0 0;
+            border: 0px solid green;
+        }
+        .mainContentItems{
+            flex: 3 0px;
+        }
+        .sideBarLeftItem{
+            order: 1;
+        }
+        .mainContentItems{
+            order: 2;
+        }
+        .sideBarRightItem{
+            order: 3;
+        }
+    </style>
+</head>
+<body>
+    <header class = headerContainer><h1> HEADER - Sample Felxbox Example</h1></header>
+    <div class = "mainContainer">
+        <sideBar class = "sideBarItem sideBarLeftItem"><div class = "center"><p>Left Side Bar</p></div></sideBar>
+        <section class = "mainContentItems">
+            <article><h2>First article</h2><p>
+                'Bhavesh Joshi' star Harshvardhan Kapoor and 'Beyond the Clouds' actress Malavika Mohanan are a new hot topic of the tinsel town. Reason? The couple is making headlines from past few days for their alleged affair. The two are often spotted together and are spending a lot of time with each other these days.</p></article>
+            <article><h2>Second article</h2><p>Malavika is the daughter of famous cinematographer K.U. Mohanan, who has worked on popular Bollywood films like “Don” (2006), “Talaash” (2012), “Fukrey” (2013), “Raees” (2017).</p></article>
+            <article><h2>Third article</h2><p>If Reports Are To Be Believed Then, The Master Actress Malavika Mohanan Received A Whopping Amount Of Rs 5 Crores For Her Films, Whereas The Darbar Actress Is Getting Rs 4 Crores As Her Remuneration.</p></article>
+        </section>
+        <sideBar class = "sideBarItem sideBarRightItem"><div class = "center"><p>Right Side Bar</p></div></sideBar>
+    </div>
+    <footer class = "footerContainer"> Footer </footer>
+</body>
+</html>
